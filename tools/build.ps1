@@ -8,17 +8,19 @@
     produces a flashable zip.
 
 .EXAMPLE
-    powershell -ExecutionPolicy Bypass -File .\tools\build.ps1 -Apk C:\apk\miuistore.apk -Out .\miui_market_cn.zip
+    powershell -ExecutionPolicy Bypass -File .\tools\build.ps1
+    powershell -ExecutionPolicy Bypass -File .\tools\build.ps1 -Apk C:\apk\newer.apk -Out .\miui_market_cn.zip
 #>
 
 param(
-    [Parameter(Mandatory = $true)][string]$Apk,
+    [string]$Apk = "",
     [string]$Out = "miui_market_cn.zip"
 )
 
 $ErrorActionPreference = 'Stop'
 
-if (-not (Test-Path $Apk)) { throw "APK not found: $Apk" }
+if (-not $Apk) { $Apk = Join-Path $PSScriptRoot "..\apk\com.xiaomi.market.apk" }
+if (-not (Test-Path $Apk)) { throw "APK not found: $Apk (put it at apk/com.xiaomi.market.apk or pass -Apk)" }
 
 $root = Split-Path $PSScriptRoot -Parent
 $work = Join-Path ([System.IO.Path]::GetTempPath()) ("miuimarket_" + [guid]::NewGuid().ToString("N"))

@@ -3,17 +3,18 @@
 # Build the KernelSU module zip from a Xiaomi Market APK.
 #
 # Usage:
-#   ./tools/build.sh <path-to-miuistore.apk> [output.zip]
+#   ./tools/build.sh [apk] [output.zip]
 #
-# The APK is NOT redistributed with this repository; supply your own copy.
+# Defaults to apk/com.xiaomi.market.apk (bundled with this repository).
+# Pass a path to build with a newer store version.
 
 set -euo pipefail
 
-APK="${1:?usage: build.sh <apk> [out.zip]}"
+APK="${1:-apk/com.xiaomi.market.apk}"
 OUT="${2:-miui_market_cn.zip}"
 
 if [ ! -f "$APK" ]; then
-    echo "APK not found: $APK" >&2
+    echo "APK not found: $APK (put it at apk/com.xiaomi.market.apk or pass a path)" >&2
     exit 1
 fi
 

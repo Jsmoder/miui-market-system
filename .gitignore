@@ -1,6 +1,5 @@
 # build outputs
 *.zip
-*.apk
 out/
 build/
 
