@@ -1,0 +1,11 @@
+# build outputs
+*.zip
+*.apk
+out/
+build/
+
+# editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

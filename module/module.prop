@@ -1,0 +1,6 @@
+id=miui_market_cn
+name=GuoXing Xiaomi Market (System App)
+version=4.130.s.00
+versionCode=40007740
+author=dsh
+description=Mount com.xiaomi.market under /system/app so the China Xiaomi App Store keeps its system-app identity and silent-install capability on global HyperOS/MIUI.
