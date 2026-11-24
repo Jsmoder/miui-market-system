@@ -46,6 +46,8 @@ KernelSU → 模块 → 找到「應用商店」(id: com.xiaomi.market) → 禁�
 
 从 Releases 下载 `miui_market_cn.zip`：
 
+> 国内直连 GitHub 可能较慢，附件下载可用任意 GitHub 加速服务。
+
 ```
 KernelSU → 模块 → 从本地安装 → 选择 miui_market_cn.zip
 ```
