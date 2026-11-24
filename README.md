@@ -1,3 +1,6 @@
+![Release](https://img.shields.io/github/v/release/Jsmoder/miui-market-system)
+![Platform](https://img.shields.io/badge/platform-Android%2012%2B-green)
+![License](https://img.shields.io/github/license/Jsmoder/miui-market-system)
 # 国行小米应用商店 · 系统化模块（KernelSU）
 
 > [English](README.en.md) | 中文
